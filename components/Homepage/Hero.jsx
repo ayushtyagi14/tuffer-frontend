@@ -41,7 +41,7 @@ const Hero = () => {
                 className="rounded-l-lg px-4 py-2 w-full lg:w-64 mr-1 mb-4 lg:mb-0 text-gray-900"
               />
               <button className="bg-[#ace3fb] py-1 px-4 rounded-xl rounded-l-none">
-                Sign up it's Free!
+                Sign up it&apos;s Free!
               </button>
             </div>
           </div>
