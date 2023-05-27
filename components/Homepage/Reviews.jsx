@@ -23,7 +23,7 @@ const Reviews = () => {
         <p className="md:text-[24px] text-[18px]">
           &quot; I can still remember standing in the kitchen in March 2020 and
           watching the first $1.00 I made come through, from sharing my own
-          research. A year later and it's now my full-time&apos;job&apos; &quot;
+          research. A year later and it&apos;s now my full-time&apos;job&apos; &quot;
         </p>
         <h1 className="md:text-[18px] mt-4"> - Conor Mac, Investor Talk</h1>
       </div>
