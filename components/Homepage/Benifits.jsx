@@ -29,7 +29,7 @@ const Benefits = () => {
           </h3>
 
           <p className="md:text-[20px] text-[14px] text-center md:text-start mt-6 md:w-[80%]">
-            Finding the right agency can be a daunting task, which is why we've
+            Finding the right agency can be a daunting task, which is why we&apos;ve
             done the hard work for you. Our vetting process ensures that we only
             list the best agencies with integrity, who have a proven track
             record of success.
@@ -101,7 +101,7 @@ const Benefits = () => {
 
           <p className="md:text-[20px] text-[14px] text-center md:text-start mt-6 md:w-[80%]">
             Connecting with these founders lets you learn about their
-            experiences and gain valuable insights into the agency's strengths
+            experiences and gain valuable insights into the agency&apos;s strengths
             and weaknesses.
           </p>
         </div>
