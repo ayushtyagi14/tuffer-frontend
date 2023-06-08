@@ -8,6 +8,7 @@ import Work from '../components/Homepage/Work';
 import Reviews from '../components/Homepage/Reviews';
 import Plans from '../components/Homepage/Plans';
 import Footer from '../components/Footer';
+import SwiperComponent from '../components/Homepage/Swiper';
 
 export default function Home() {
   const [colorChange, setColorchange] = useState(false);
@@ -39,6 +40,7 @@ export default function Home() {
         </div>
       )}
       <Hero />
+      <SwiperComponent />
       <Section2 />
       <Benefits />
       <Work />
