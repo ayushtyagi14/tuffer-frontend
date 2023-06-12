@@ -1,132 +1,124 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import AnimatedImageLoop from "../AnimateLoop";
 import { useState, useEffect } from "react";
+import SwiperComponent from "./Swiper";
+import { useRouter } from "next/router";
 
 const Hero = () => {
-  const images = ["/Email/email1.png", "/Email/email4.png"];
-  const images2 = ["/Email/email3.png", "/Email/email2.png"];
+  const router = useRouter();
 
-  const [width, setWidth] = useState(null);
-  let mobile = false;
+  const images = [
+    "/creatives/creative1.jpeg",
+    "/creatives/creative6.jpeg",
+    "/Email/email4.png",
+    "/creatives/creative3.jpeg",
+    "/Email/email1.png",
+  ];
+  const images2 = [
+    "/creatives/creative2.jpeg",
+    "/Email/email3.png",
+    "/creatives/creative4.jpeg",
+    "/Email/email2.png",
+    "/creatives/creative5.jpeg",
+  ];
 
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    window.addEventListener("resize", () => setWidth(window.innerWidth));
-    return () => {
-      window.removeEventListener("resize", () => setWidth(window.innerWidth));
-    };
-  }, []);
-
-  if (width < 1000) {
-    mobile = true;
-  } else {
-    mobile = false;
-  }
+  const imagesAll = [
+    "/creatives/creative1.jpeg",
+    "/creatives/creative6.jpeg",
+    "/Email/email4.png",
+    "/creatives/creative3.jpeg",
+    "/Email/email1.png",
+    "/creatives/creative2.jpeg",
+    "/Email/email3.png",
+    "/creatives/creative4.jpeg",
+    "/Email/email2.png",
+    "/creatives/creative5.jpeg",
+  ];
 
   return (
-    <section className="bg-transparent text-black mb-0">
-      <div className="pt-16 pb-0 px-0 flex flex-col w-full">
-        <div
-          className={`lg:flex items-center ${
-            mobile
-              ? "h-max m-10 mx-0 flex-wrap"
-              : "h-screen flex-row my-20 mx-8"
-          }`}
-        >
-          <div className={` ${mobile ? "md:w-3/5 mx-auto" : "md:w-1/2"}`}>
-            <h1
-              className={`${
-                mobile ? "md:text-[65px]" : "md:text-[50px]"
-              } text-[32px] md:px-0 font-extrabold ${
-                mobile ? "text-center" : "text-start"
-              } leading-tight mb-8`}
-            >
-              We Are Changing {!mobile && <br />} The Way You Hire
-            </h1>
-            <div
-              className={`md:text-4xl text-2xl uppercase my-4 leading-none ${
-                mobile ? "text-center" : "text-start"
-              }`}
-            >
-              <span style={{ whiteSpace: "nowrap" }}>
-                <TypeAnimation
-                  sequence={[
-                    "Performance marketing",
-                    2000,
-                    "SEO",
-                    2000,
-                    "TikTok",
-                    2000,
-                    "Design",
-                    2000,
-                    "Branding",
-                    2000,
-                    "CRO",
-                    2000,
-                  ]}
-                  speed={5}
-                  wrapper="span"
-                  cursor={false}
-                  repeat={Infinity}
-                />
-              </span>
-              <br />
-              Agencies
-            </div>
-            <p
-              className={`text-lg w-[75%] md:w-full mx-auto ${
-                mobile ? "text-center" : "text-start"
-              } my-8`}
-            >
-              Never Spend A Dollar On The{" "}
-              <span className="text-red-500"> Wrong Agency </span> Ever Again!
-            </p>
-            <div
-              className={`flex flex-col lg:flex-row justify-center w-[80%] ${
-                mobile ? "mx-auto" : ""
-              }`}
-            >
-              <input
-                type="email"
-                placeholder="Email"
-                className="md:rounded-l-lg rounded-lg md:rounded-none px-4 py-2 md:w-[65%] w-[90%] mx-auto md:mr-1 mb-2 lg:mb-0 text-gray-900"
+    <section className="bg-transparent text-[#001b38] mb-0">
+      <div className="pt-20 flex md:flex-row flex-col justify-between w-[90%] mx-auto">
+        <div className="md:w-[75%] w-full mt-16 flex flex-col md:items-start items-center">
+          <h1 className="md:text-[40px] text-[32px] md:px-0 font-extrabold md:text-start text-center leading-tight md:mb-8 mb-2">
+            We Are Changing <br className="md:block hidden" /> The Way You Hire
+          </h1>
+          <div className="md:text-4xl text-2xl my-4 leading-none md:text-start text-center">
+            <span style={{ whiteSpace: "nowrap" }}>
+              <TypeAnimation
+                sequence={[
+                  "Performance Marketing",
+                  2000,
+                  "SEO",
+                  2000,
+                  "TikTok",
+                  2000,
+                  "Design",
+                  2000,
+                  "Branding",
+                  2000,
+                  "CRO",
+                  2000,
+                ]}
+                speed={5}
+                wrapper="span"
+                cursor={false}
+                repeat={Infinity}
               />
-              <button className="bg-[#ace3fb] py-2 md:py-1 px-4 rounded-lg md:rounded-l-none md:w-[35%] w-[90%] mx-auto">
-                Sign up it&apos;s Free!
-              </button>
-            </div>
-            <div className="flex flex-row items-center mt-6 w-[95%] mx-auto">
-              <div className="flex flex-row items-center">
-                <img
-                  src="/person1.jpg"
-                  alt="person1"
-                  className="h-10 w-10 rounded-full"
-                />
-                <img
-                  src="/person2.jpg"
-                  alt="person2"
-                  className="h-10 w-10 rounded-full"
-                  style={{ marginLeft: "-14px" }}
-                />
-                <img
-                  src="/person3.jpg"
-                  alt="person3"
-                  className="h-10 w-10 rounded-full"
-                  style={{ marginLeft: "-14px" }}
-                />
-                <img
-                  src="/person4.jpg"
-                  alt="person4"
-                  className="h-10 w-10 rounded-full"
-                  style={{ marginLeft: "-14px" }}
-                />
-              </div>
-              <p className="md:text-[20px] text-[14px] ml-2">20+ Founders Have Already Joined!</p>
-            </div>
+            </span>
+            <br />
+            Agencies
           </div>
-          {!mobile && <AnimatedImageLoop images={images} />}
-          {!mobile && <AnimatedImageLoop images={images2} reverse />}
+          <p className="md:text-[22px] w-full md:w-[80%] md:mx-0 mx-auto md:text-start text-center md:mt-8">
+            Never Spend A Dollar On The{" "}
+            <span className="text-red-500"> Wrong Agency </span> Ever Again!
+          </p>
+          <button
+            onClick={() => router.push("#waitlist")}
+            className="bg-[#ace3fb] py-2 px-4 rounded-lg mt-4"
+          >
+            Request Early Access!
+          </button>
+          <div className="flex flex-row items-center mt-4 w-[95%]">
+            <div className="flex flex-row items-center">
+              <img
+                src="/person1.jpg"
+                alt="person1"
+                className="h-6 w-6 rounded-full"
+              />
+              <img
+                src="/person2.jpg"
+                alt="person2"
+                className="h-6 w-6 rounded-full ml-[-10px]"
+              />
+              <img
+                src="/person3.jpg"
+                alt="person3"
+                className="h-6 w-6 rounded-full ml-[-10px]"
+              />
+              <img
+                src="/person4.jpg"
+                alt="person4"
+                className="h-6 w-6 rounded-full ml-[-10px]"
+              />
+            </div>
+            <p className="md:text-[16px] text-[14px] ml-2">
+              20+ Founders Have Already Joined!
+            </p>
+          </div>
+        </div>
+        <div className="md:grid md:grid-cols-3 md:gap-8 hidden">
+          <div className="w-full h-[600px] md:h-[90vh] mx-auto">
+            <SwiperComponent images={images} />
+          </div>
+          <div className="w-full h-[600px] md:h-[90vh] mx-auto">
+            <SwiperComponent images={images2} reverse />
+          </div>
+          <div className="w-full h-[600px] md:h-[90vh] mx-auto">
+            <SwiperComponent images={images} />
+          </div>
+        </div>
+        <div className="md:hidden block">
+          <SwiperComponent images={imagesAll} horizontal />
         </div>
       </div>
     </section>

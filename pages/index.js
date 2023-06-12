@@ -13,7 +13,7 @@ import SwiperComponent from '../components/Homepage/Swiper';
 export default function Home() {
   const [colorChange, setColorchange] = useState(false);
   const changeNavbarColor = () => {
-    if (window.scrollY >= 50) {
+    if (window.scrollY >= 30) {
       setColorchange(true);
     } else {
       setColorchange(false);
@@ -40,7 +40,7 @@ export default function Home() {
         </div>
       )}
       <Hero />
-      <SwiperComponent />
+      {/* <SwiperComponent /> */}
       <Section2 />
       <Benefits />
       <Work />

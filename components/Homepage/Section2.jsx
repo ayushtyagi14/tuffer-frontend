@@ -35,23 +35,82 @@ const Section2 = () => {
   }, []);
 
   return (
-    <div
-      key={key}
-      className="bg-[#ace3fb] my-20 mt-0 max-h-min overflow-hidden"
-    >
-      <animated.div
-        style={{
-          ...scrolling,
-          justifyContent: mobile ? "center" : "flex-start",
-        }}
-        className="w-full"
+    <>
+      <div
+        key={key}
+        className="bg-[#ace3fb] my-20 mt-0 max-h-min overflow-hidden"
       >
-        <p className="md:text-[50px] text-[30px] uppercase whitespace-nowrap">
-          Finding a great agency is more difficult than ever - but with Tuffer,
-          it&apos;s not.
-        </p>
-      </animated.div>
-    </div>
+        <animated.div
+          style={{
+            ...scrolling,
+            justifyContent: mobile ? "center" : "flex-start",
+          }}
+          className="w-full"
+        >
+          <div className="flex flex-row items-center justify-between md:w-full w-max py-2">
+            <div className="flex flex-row items-center ml-4 md:ml-0">
+              <img
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios-filled/50/meta.png"
+                alt="meta"
+              />
+              <h1 className="text-[20px] ml-5 font-bold">Meta</h1>
+            </div>
+            <div className="flex flex-row items-center ml-4 md:ml-0">
+              <img
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios-filled/50/youtube-play.png"
+                alt="youtube-play"
+              />
+              <h1 className="text-[20px] ml-5 font-bold">YouTube</h1>
+            </div>
+            <div className="flex flex-row items-center ml-4 md:ml-0">
+              <img
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios-filled/50/mac-os.png"
+                alt="mac-os"
+              />
+              <h1 className="text-[20px] ml-5 font-bold">Apple</h1>
+            </div>
+            <div className="flex flex-row items-center ml-4 md:ml-0">
+              <img
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios-filled/50/dell.png"
+                alt="dell"
+              />
+              <h1 className="text-[20px] ml-5 font-bold">Dell</h1>
+            </div>
+            <div className="flex flex-row items-center ml-4 md:ml-0">
+              <img
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios-filled/50/dropbox.png"
+                alt="dropbox"
+              />
+              <h1 className="text-[20px] ml-5 font-bold">Dropbox</h1>
+            </div>
+            <div className="flex flex-row items-center ml-4 md:ml-0">
+              <img
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios-filled/50/canva.png"
+                alt="canva"
+              />
+              <h1 className="text-[20px] ml-5 font-bold">Canva</h1>
+            </div>
+          </div>
+        </animated.div>
+      </div>
+      <p className="text-center md:text-[34px] text-[15px] px-2 md:px-0 font-bold">
+        Finding a great agency is more difficult{" "}
+        <span className="text-red-500">than ever</span> <br /> - but with
+        Tuffer, it&apos;s <span className="text-red-500">not.</span>
+      </p>
+    </>
   );
 };
 
