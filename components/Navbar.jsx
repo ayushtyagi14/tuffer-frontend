@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const router = useRouter();
 
   return (
     <>
@@ -20,7 +17,10 @@ const Navbar = () => {
         </div>
         <div className="flex-row items-center">
           <button className="md:mx-3 mx-1">Sign In</button>
-          <button className="md:mx-3 mx-1 bg-[#ace3fb] md:px-3 px-2 py-2 md:text-[16px] text-[14px] rounded-xl">
+          <button
+            onClick={() => router.push("#waitlist")}
+            className="md:mx-3 mx-1 bg-[#cc0049] text-white md:px-3 px-2 py-2 md:text-[16px] text-[14px] rounded-xl"
+          >
             Get Started
           </button>
         </div>

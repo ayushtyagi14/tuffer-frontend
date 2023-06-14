@@ -23,6 +23,18 @@ export default function Home() {
     window.addEventListener("scroll", changeNavbarColor);
   }, []);
 
+  const images = [
+    "/Email/email1.png",
+    "/Email/email2.png",
+    "/Email/email3.png",
+    "/Email/email4.png",
+    "/Email/email5.png",
+    "/Email/email6.png",
+    "/Email/email7.png",
+    "/Email/email8.png",
+    "/Email/email9.png",
+  ];
+
   return (
     <div>
       <Head>
@@ -43,6 +55,7 @@ export default function Home() {
       {/* <SwiperComponent /> */}
       <Section2 />
       <Benefits />
+      <SwiperComponent images={images} horizontal homepage />
       <Work />
       <Reviews />
       <Plans />

@@ -9,29 +9,32 @@ const Hero = () => {
 
   const images = [
     "/creatives/creative1.jpeg",
-    "/creatives/creative6.jpeg",
-    "/Email/email4.png",
+    "/creatives/creative2.jpeg",
     "/creatives/creative3.jpeg",
-    "/Email/email1.png",
+    "/creatives/creative10.jpeg",
+    "/creatives/creative13.jpeg",
   ];
   const images2 = [
-    "/creatives/creative2.jpeg",
-    "/Email/email3.png",
     "/creatives/creative4.jpeg",
-    "/Email/email2.png",
     "/creatives/creative5.jpeg",
+    "/creatives/creative6.jpeg",
+    "/creatives/creative11.jpeg",
+    "/creatives/creative14.jpeg",
+  ];
+  const images3 = [
+    "/creatives/creative7.jpeg",
+    "/creatives/creative8.jpeg",
+    "/creatives/creative9.jpeg",
+    "/creatives/creative12.jpeg",
+    "/creatives/creative15.jpeg",
   ];
 
   const imagesAll = [
     "/creatives/creative1.jpeg",
     "/creatives/creative6.jpeg",
-    "/Email/email4.png",
     "/creatives/creative3.jpeg",
-    "/Email/email1.png",
     "/creatives/creative2.jpeg",
-    "/Email/email3.png",
     "/creatives/creative4.jpeg",
-    "/Email/email2.png",
     "/creatives/creative5.jpeg",
   ];
 
@@ -74,7 +77,7 @@ const Hero = () => {
           </p>
           <button
             onClick={() => router.push("#waitlist")}
-            className="bg-[#ace3fb] py-2 px-4 rounded-lg mt-4"
+            className="bg-[#cc0049] text-white py-2 px-4 rounded-lg mt-4"
           >
             Request Early Access!
           </button>
@@ -114,7 +117,7 @@ const Hero = () => {
             <SwiperComponent images={images2} reverse />
           </div>
           <div className="w-full h-[600px] md:h-[90vh] mx-auto">
-            <SwiperComponent images={images} />
+            <SwiperComponent images={images3} />
           </div>
         </div>
         <div className="md:hidden block">
