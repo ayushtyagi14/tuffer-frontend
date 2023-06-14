@@ -50,7 +50,7 @@ const SwiperComponent = ({ images, reverse, horizontal, homepage }) => {
                   src={item}
                   alt={`Image ${index}`}
                   className={`rounded-lg shadow-lg ${
-                    homepage ? "h-[500px] w-max mb-20" : "h-max w-72 mt-20"
+                    homepage ? "h-[500px] w-max mb-20" : "h-72 w-72 mt-20"
                   }`}
                 />
               </SwiperSlide>
