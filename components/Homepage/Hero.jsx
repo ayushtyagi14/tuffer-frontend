@@ -1,6 +1,5 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import { useState, useEffect } from "react";
 import SwiperComponent from "./Swiper";
 import { useRouter } from "next/router";
 
@@ -14,6 +13,7 @@ const Hero = () => {
     "/creatives/creative10.jpeg",
     "/creatives/creative13.jpeg",
   ];
+
   const images2 = [
     "/creatives/creative4.jpeg",
     "/creatives/creative5.jpeg",
@@ -21,6 +21,7 @@ const Hero = () => {
     "/creatives/creative11.jpeg",
     "/creatives/creative14.jpeg",
   ];
+
   const images3 = [
     "/creatives/creative7.jpeg",
     "/creatives/creative8.jpeg",
@@ -38,14 +39,19 @@ const Hero = () => {
     "/creatives/creative5.jpeg",
   ];
 
+  const handleScrollToWaitlist = () => {
+    const waitlistSection = document.getElementById("waitlist");
+    waitlistSection.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="bg-transparent text-[#001b38] mb-0">
-      <div className="pt-20 flex md:flex-row flex-col justify-between w-[90%] mx-auto">
-        <div className="md:w-[75%] w-full mt-16 flex flex-col md:items-start items-center">
-          <h1 className="md:text-[40px] text-[32px] md:px-0 font-extrabold md:text-start text-center leading-tight md:mb-8 mb-2">
+      <div className="pt-20 flex lg:flex-row flex-col w-[95%] mx-auto">
+        <div className="lg:w-[50%] w-full mt-16 flex flex-col lg:items-start items-center">
+          <h1 className="md:text-[48px] text-[32px] md:px-0 font-extrabold md:text-start text-center leading-tight mb-2">
             We Are Changing <br className="md:block hidden" /> The Way You Hire
           </h1>
-          <div className="md:text-4xl text-2xl my-4 leading-none md:text-start text-center">
+          <div className="md:text-4xl text-2xl my-2 leading-none lg:text-start text-center">
             <span style={{ whiteSpace: "nowrap" }}>
               <TypeAnimation
                 sequence={[
@@ -71,12 +77,12 @@ const Hero = () => {
             <br />
             Agencies
           </div>
-          <p className="md:text-[22px] w-full md:w-[80%] md:mx-0 mx-auto md:text-start text-center md:mt-8">
+          <p className="md:text-[22px] w-full lg:w-[80%] md:mx-0 mx-auto lg:text-start text-center md:mt-4">
             Never Spend A Dollar On The{" "}
             <span className="text-red-500"> Wrong Agency </span> Ever Again!
           </p>
           <button
-            onClick={() => router.push("#waitlist")}
+            onClick={handleScrollToWaitlist}
             className="bg-[#cc0049] text-white py-2 px-4 rounded-lg mt-4"
           >
             Request Early Access!
@@ -109,18 +115,18 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        <div className="md:grid md:grid-cols-3 md:gap-8 hidden">
-          <div className="w-full h-[600px] md:h-[90vh] mx-auto">
+        <div className="lg:grid lg:grid-cols-3 lg:gap-4 hidden">
+          <div className="md:h-[90vh] mx-auto">
             <SwiperComponent images={images} />
           </div>
-          <div className="w-full h-[600px] md:h-[90vh] mx-auto">
+          <div className="md:h-[90vh] mx-auto">
             <SwiperComponent images={images2} reverse />
           </div>
-          <div className="w-full h-[600px] md:h-[90vh] mx-auto">
+          <div className="md:h-[90vh] mx-auto">
             <SwiperComponent images={images3} />
           </div>
         </div>
-        <div className="md:hidden block">
+        <div className="lg:hidden block">
           <SwiperComponent images={imagesAll} horizontal />
         </div>
       </div>

@@ -70,37 +70,50 @@ const Section2 = () => {
               <img
                 width="50"
                 height="50"
-                src="https://img.icons8.com/ios-filled/50/mac-os.png"
-                alt="mac-os"
+                src="https://img.icons8.com/ios-glyphs/50/tiktok.png"
+                alt="tiktok"
               />
-              <h1 className="text-[20px] ml-5 font-bold">Apple</h1>
+              <h1 className="text-[20px] ml-5 font-bold">TikTok</h1>
             </div>
             <div className="flex flex-row items-center ml-4 md:ml-0">
               <img
                 width="50"
                 height="50"
-                src="https://img.icons8.com/ios-filled/50/dell.png"
-                alt="dell"
+                src="https://img.icons8.com/ios-filled/50/google-logo.png"
+                alt="google-logo"
               />
-              <h1 className="text-[20px] ml-5 font-bold">Dell</h1>
+              <h1 className="text-[20px] ml-5 font-bold">Google</h1>
+            </div>
+            <div className="flex flex-row items-center ml-4 md:ml-0">
+              <img width="50" height="50" src="/klaviyo.png" alt="klaviyo" />
+              <h1 className="text-[20px] ml-5 font-bold">Klaviyo</h1>
             </div>
             <div className="flex flex-row items-center ml-4 md:ml-0">
               <img
                 width="50"
                 height="50"
-                src="https://img.icons8.com/ios-filled/50/dropbox.png"
-                alt="dropbox"
+                src="https://img.icons8.com/ios-filled/50/shopify.png"
+                alt="shopify"
               />
-              <h1 className="text-[20px] ml-5 font-bold">Dropbox</h1>
+              <h1 className="text-[20px] ml-5 font-bold">Shopify</h1>
             </div>
             <div className="flex flex-row items-center ml-4 md:ml-0">
               <img
                 width="50"
                 height="50"
-                src="https://img.icons8.com/ios-filled/50/canva.png"
-                alt="canva"
+                src="https://img.icons8.com/ios-filled/50/snapchat--v1.png"
+                alt="snapchat--v1"
               />
-              <h1 className="text-[20px] ml-5 font-bold">Canva</h1>
+              <h1 className="text-[20px] ml-5 font-bold">Snapchat</h1>
+            </div>
+            <div className="flex flex-row items-center ml-4 md:ml-0">
+              <img
+                width="50"
+                height="50"
+                src="/unbounce.png"
+                alt="unbounce"
+              />
+              <h1 className="text-[20px] ml-5 font-bold">Unbounce</h1>
             </div>
           </div>
         </animated.div>

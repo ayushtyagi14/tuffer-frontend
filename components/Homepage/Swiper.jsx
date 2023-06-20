@@ -33,7 +33,7 @@ const SwiperComponent = ({ images, reverse, horizontal, homepage }) => {
         <div>
           <Swiper
             modules={[Autoplay]}
-            spaceBetween={50}
+            spaceBetween={0}
             slidesPerView={mobile ? (homepage ? 2 : 1) : homepage ? 4 : 1}
             autoplay={{
               delay: autoplayDelay,
