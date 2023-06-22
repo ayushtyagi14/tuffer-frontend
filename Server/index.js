@@ -24,7 +24,7 @@ const port = 8080;
 
 /** HTTP GET Request */
 app.get('/', (req, res) => {
-    res.status(201).json("You have reached the Tutorio API, Surrender yourself, else you will face the wrath of Developer");
+    res.status(201).json("You have reached the Tuffer API, Surrender yourself, else you will face the wrath of Developer");
 });
 
 
