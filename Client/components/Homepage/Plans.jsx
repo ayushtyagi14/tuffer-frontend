@@ -4,24 +4,35 @@ const Plans = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [selectedType, setSelectedType] = useState("brand");
 
   const handleNameChange = (e) => {
-    setFirstName(e.target.value);
-    setLastName(e.target.value);
+    const { name, value } = e.target;
+    if (name === "firstName") {
+      setFirstName(value);
+    } else if (name === "lastName") {
+      setLastName(value);
+    }
   };
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
 
+  const handleTypeChange = (e) => {
+    setSelectedType(e.target.value);
+  };
+
   const handleJoinWaitlist = () => {
-    // Perform action on joining the waitlist, e.g., submit the name and email
-    console.log("Name:", firstName);
+    // Perform action on joining the waitlist, e.g., submit the name, email, and type
+    console.log("Name:", firstName, lastName);
     console.log("Email:", email);
+    console.log("Selected Type:", selectedType);
     // Reset the input fields
     setFirstName("");
     setLastName("");
     setEmail("");
+    setSelectedType("brand");
   };
 
   return (
@@ -55,6 +66,7 @@ const Plans = () => {
                   </label>
                   <input
                     type="text"
+                    name="firstName"
                     value={firstName}
                     onChange={handleNameChange}
                     className="px-4 py-2 border w-full border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ace3fb] focus:border-transparent"
@@ -66,13 +78,28 @@ const Plans = () => {
                   </label>
                   <input
                     type="text"
+                    name="lastName"
                     value={lastName}
                     onChange={handleNameChange}
                     className="px-4 py-2 border w-full border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ace3fb] focus:border-transparent"
                   />
                 </div>
               </div>
-              <div className="flex flex-col items-start w-full">
+              <div className="flex flex-col items-start w-full mb-4">
+                <label htmlFor="selectedType" className="font-bold mb-1">
+                  Type:
+                </label>
+                <select
+                  name="selectedType"
+                  value={selectedType}
+                  onChange={handleTypeChange}
+                  className="px-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ace3fb] focus:border-transparent"
+                >
+                  <option value="brand">Brand</option>
+                  <option value="agency">Agency</option>
+                </select>
+              </div>
+              <div className="flex flex-col items-start mt-2 w-full">
                 <label htmlFor="lastName" className="font-bold mb-1">
                   Work Email:
                 </label>
