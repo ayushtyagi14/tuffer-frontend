@@ -9,7 +9,7 @@ const Pricing = () => {
         </h2>
         <p className="text-center text-gray-600 text-[18px]">
           <span className="text-[28px]">
-            It's <span className="text-red-500">FREE!</span>
+            It&apos;s <span className="text-red-500">FREE!</span>
           </span>
           <br />
           <br />
@@ -17,8 +17,8 @@ const Pricing = () => {
           quick 15 min call with you to know more about your brand and needs,
           and we bring the best 3 options for you.
           <br />
-          You don't need to choose from 75,000 agencies listed on the clutch,
-          we'll bring the best 3 for you. All the work of vetting on us.
+          You don&apos;t need to choose from 75,000 agencies listed on the clutch,
+          we&apos;ll bring the best 3 for you. All the work of vetting on us.
         </p>
       </div>
     </div>
