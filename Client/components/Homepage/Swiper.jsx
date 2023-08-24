@@ -85,23 +85,6 @@ const SwiperComponent = ({ images, reverse, horizontal, homepage }) => {
                     reverse ? "rotate-180" : ""
                   }`}
                 />
-                <div className="aspect-w-auto aspect-h-auto w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-auto xl:aspect-h-auto">
-                  <Image
-                    alt={`Image ${index}`}
-                    src={item}
-                    fill
-                    className={`
-                duration-700 ease-in-out h-auto w-auto rounded-lg shadow-lg my-28 ${
-                  reverse ? "rotate-180" : ""
-                }
-                ${
-                  isLoading
-                    ? "scale-110 blur-2xl grayscale"
-                    : "scale-100 blur-0 grayscale-0"
-                })`}
-                    onLoadingComplete={() => setLoading(false)}
-                  />
-                </div>
               </SwiperSlide>
             ))}
           </Swiper>

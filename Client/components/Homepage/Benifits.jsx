@@ -3,15 +3,15 @@ import React from "react";
 const Benefits = () => {
   return (
     <div className=" w-[90%] mx-auto px-6">
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mb-32 items-center w-full mt-20">
+      <div className="md:grid md:grid-cols-2 flex flex-col-reverse gap-10 mb-32 items-center w-full mt-20">
         <div className="w-full">
           <img src="/benifit1.png" alt="Benefit 1" className="w-full" />
         </div>
         <div className="w-full">
-          <h3 className="md:text-3xl text-xl text-center md:text-start font-bold mb-2">
-            We Only List Trusted And Vetted <br /> High-Performing Agencies That
+          <h3 className="md:text-3xl text-lg text-center md:text-start font-bold mb-2">
+            We only list trusted and vetted <br /> high-performing agencies that
             <br />
-            <span className="text-red-500">Founders Actually Love.</span>
+            <span className="text-red-500">founders actually love.</span>
           </h3>
 
           <p className="md:text-lg text-sm text-center md:text-start mt-6">
@@ -23,14 +23,14 @@ const Benefits = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mb-32 items-center w-full">
+      <div className="md:grid md:grid-cols-2 flex flex-col gap-20 mb-32 items-center w-full">
         <div className="w-full">
-          <h3 className="md:text-3xl text-xl text-center md:text-start font-bold mb-2">
-            Agencies Are Endorsed By
+          <h3 className="md:text-3xl text-lg text-center md:text-start font-bold mb-2">
+            Agencies are endorsed by
             <br />
-            Real Founders And Business Owners
+            real founders and business owners
             <br />
-            <span className="text-red-500">You Can Trust.</span>
+            <span className="text-red-500">you can trust.</span>
           </h3>
 
           <p className="md:text-lg text-sm text-center md:text-start mt-6">
@@ -39,23 +39,23 @@ const Benefits = () => {
           </p>
         </div>
         <div className="w-full">
-          <img src="/benifit2.png" alt="Benefit 2" className="w-full" />
+          <img src="/benifit2.png" alt="Benefit 2" className="md:w-[80%] w-full h-[300px]" />
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mb-32 items-center w-full">
+      <div className="md:grid md:grid-cols-2 flex flex-col-reverse gap-10 mb-32 items-center w-full">
         <div className="w-full">
-          <img src="/benifit3.png" alt="Benefit 3" className="w-full" />
+          <img src="/benifit3.png" alt="Benefit 3" className="md:w-[60%] w-full h-[350px]" />
         </div>
 
         <div className="w-full">
-          <h3 className="md:text-3xl text-xl text-center md:text-start font-bold mb-2">
-            Message Or Get On Call And Talk To
+          <h3 className="md:text-3xl text-lg text-center md:text-start font-bold mb-2">
+            Message or get on call and talk to
             <br />
-            The Founders Who{" "}
-            <span className="text-red-500"> Already Worked </span>
+            the founders who{" "}
+            <span className="text-red-500"> already worked </span>
             <br />
-            With Those Agencies.
+            With those agencies.
           </h3>
 
           <p className="md:text-lg text-sm text-center md:text-start mt-6">
@@ -66,17 +66,17 @@ const Benefits = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mb-32 items-center w-full">
+      <div className="md:grid md:grid-cols-2 flex flex-col gap-20 mb-32 items-center w-full">
         <div className="w-full">
           <h3 className="md:text-3xl text-xl text-center md:text-start font-bold mb-2">
-            No More Useless Discovery Calls <br /> With Tens Of Agencies, Give
-            An Assignment, And
-            <span className="text-red-500"> Ask Personalized</span>
+            No more useless discovery calls <br /> with tens of agencies, give
+            an assignment, and
+            <span className="text-red-500"> ask personalized</span>
             <br />
-            <span className="text-red-500"> Questions </span>
-            To Pre-Vetted
+            <span className="text-red-500"> questions </span>
+            to pre-Vetted
             <br />
-            High-Performing Agencies.
+            high-performing agencies.
           </h3>
 
           <p className="md:text-lg text-sm text-center md:text-start mt-6">
@@ -86,20 +86,20 @@ const Benefits = () => {
           </p>
         </div>
         <div className="w-full">
-          <img src="/benifit4.png" alt="Benefit 4" className="w-full" />
+          <img src="/benifit4.png" alt="Benefit 4" className="md:w-[80%] w-full h-[300px]" />
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mb-32 items-center w-full mt-20">
+      <div className="md:grid md:grid-cols-2 flex flex-col-reverse gap-10 mb-32 items-center w-full mt-20">
         <div className="w-full">
-          <img src="/benifit5.png" alt="Benefit 5" className="w-full" />
+          <img src="/benifit5.png" alt="Benefit 5" className="md:w-[80%] w-full h-[300px]" />
         </div>
         <div className="w-full">
-          <h3 className="md:text-3xl text-xl text-center md:text-start font-bold mb-2">
-            Choose <span className="text-red-500"> Niche Experts </span> By
-            Looking At A{" "}
-            <span className="text-red-500"> Detailed Portfolio </span> Of Each
-            Agency.
+          <h3 className="md:text-3xl text-lg text-center md:text-start font-bold mb-2">
+            Choose <span className="text-red-500"> niche experts </span> by
+            looking at a{" "}
+            <span className="text-red-500"> detailed portfolio </span> of each
+            agency.
           </h3>
 
           <p className="md:text-lg text-sm text-center md:text-start mt-6">

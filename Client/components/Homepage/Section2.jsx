@@ -106,19 +106,10 @@ const Section2 = () => {
               />
               <h1 className="text-[20px] ml-5 font-bold">Snapchat</h1>
             </div>
-            <div className="flex flex-row items-center ml-4 md:ml-0">
-              <img
-                width="50"
-                height="50"
-                src="/unbounce.png"
-                alt="unbounce"
-              />
-              <h1 className="text-[20px] ml-5 font-bold">Unbounce</h1>
-            </div>
           </div>
         </animated.div>
       </div>
-      <p className="text-center md:text-[34px] text-[15px] px-2 md:px-0 font-bold">
+      <p className="text-center md:text-[46px] text-[28px] px-2 md:px-0 font-bold">
         Finding a great agency is more difficult{" "}
         <span className="text-red-500">than ever</span> <br /> - but with
         Tuffer, it&apos;s <span className="text-red-500">not.</span>
