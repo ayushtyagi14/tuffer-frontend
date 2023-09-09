@@ -26,7 +26,6 @@ const Pricing = () => {
           <br />
           You don&apos;t need to choose from 75,000 agencies listed on the
           clutch, we&apos;ll bring the best 3 for you—all the pre-vetting on us.
-          on us.
         </p>
       </div>
     </div>

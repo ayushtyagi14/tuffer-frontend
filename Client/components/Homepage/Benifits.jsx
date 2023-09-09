@@ -55,13 +55,11 @@ const Benefits = () => {
             the founders who{" "}
             <span className="text-red-500"> already worked </span>
             <br />
-            With those agencies.
+            with those agencies.
           </h3>
 
           <p className="md:text-lg text-sm text-center md:text-start mt-6">
-            Connecting with these founders lets you learn about their
-            experiences and gain valuable insights into the agency&apos;s
-            strengths and weaknesses.
+          After we hop on a quick 15 min call with you, we&apos;ll connect you with the best 3 agencies for your brand. Connecting with agencies lets you access the founders they already worked with. You learn about their experiences and gain valuable insights into the agency&apos;s strengths and weaknesses. 
           </p>
         </div>
       </div>
@@ -74,7 +72,7 @@ const Benefits = () => {
             <span className="text-red-500"> ask personalized</span>
             <br />
             <span className="text-red-500"> questions </span>
-            to pre-Vetted
+            to pre-vetted
             <br />
             high-performing agencies.
           </h3>

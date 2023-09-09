@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const handleScrollToWaitlist = () => {
@@ -11,9 +12,7 @@ const Navbar = () => {
     <nav className="flex flex-row items-center justify-between bg-transparent text-black md:p-4 p-2 z-[999]">
       <div className="flex items-center">
         <Link href="/">
-          <span className="text-[30px] font-semibold mr-4 uppercase">
-            Tuffer
-          </span>
+          <Image src={"/logo.png"} width={150} height={150} alt="Tuffer Logo" />
         </Link>
       </div>
       <button
