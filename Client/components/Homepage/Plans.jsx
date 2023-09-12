@@ -36,7 +36,7 @@ const Plans = () => {
   };
 
   return (
-    <div>
+    <div id="waitlist">
       <div className="text-center mb-40 flex flex-col items-center mx-5">
         <h1 className="md:text-4xl text-2xl font-extrabold">
           Ready to find the <span className="text-red-500"> best agency </span>{" "}

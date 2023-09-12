@@ -3,9 +3,9 @@ import React from "react";
 const Benefits = () => {
   return (
     <div className=" w-[90%] mx-auto px-6">
-      <div className="md:grid md:grid-cols-2 flex flex-col-reverse gap-10 mb-32 items-center w-full mt-20">
+      <div className="md:grid md:grid-cols-2 flex flex-col-reverse md:gap-10 gap-10 mb-32 items-center w-full mt-20">
         <div className="w-full">
-          <img src="/benifit1.png" alt="Benefit 1" className="w-full" />
+          <img src="/benifit1.png" alt="Benefit 1" className="w-auto" />
         </div>
         <div className="w-full">
           <h3 className="md:text-3xl text-lg text-center md:text-start font-bold mb-2">
@@ -23,7 +23,7 @@ const Benefits = () => {
         </div>
       </div>
 
-      <div className="md:grid md:grid-cols-2 flex flex-col gap-20 mb-32 items-center w-full">
+      <div className="md:grid md:grid-cols-2 flex flex-col md:gap-20 gap-10 mb-32 items-center w-full">
         <div className="w-full">
           <h3 className="md:text-3xl text-lg text-center md:text-start font-bold mb-2">
             Agencies are endorsed by
@@ -38,14 +38,22 @@ const Benefits = () => {
             many founders or business owners endorsed a particular agency.
           </p>
         </div>
-        <div className="w-full">
-          <img src="/benifit2.png" alt="Benefit 2" className="md:w-[80%] w-full h-[300px]" />
+        <div className="w-full flex justify-end">
+          <img
+            src="/benifit2.png"
+            alt="Benefit 2"
+            className="md:w-auto w-full md:h-[300px] h-auto"
+          />
         </div>
       </div>
 
-      <div className="md:grid md:grid-cols-2 flex flex-col-reverse gap-10 mb-32 items-center w-full">
-        <div className="w-full">
-          <img src="/benifit3.png" alt="Benefit 3" className="md:w-[60%] w-full h-[350px]" />
+      <div className="md:grid md:grid-cols-2 flex flex-col-reverse md:gap-10 gap-10 mb-32 items-center w-full">
+        <div className="w-full flex justify-start">
+          <img
+            src="/benifit3.png"
+            alt="Benefit 3"
+            className="md:w-auto w-full md:h-[350px] h-auto"
+          />
         </div>
 
         <div className="w-full">
@@ -59,12 +67,16 @@ const Benefits = () => {
           </h3>
 
           <p className="md:text-lg text-sm text-center md:text-start mt-6">
-          After we hop on a quick 15 min call with you, we&apos;ll connect you with the best 3 agencies for your brand. Connecting with agencies lets you access the founders they already worked with. You learn about their experiences and gain valuable insights into the agency&apos;s strengths and weaknesses. 
+            After we hop on a quick 15 min call with you, we&apos;ll connect you
+            with the best 3 agencies for your brand. Connecting with agencies
+            lets you access the founders they already worked with. You learn
+            about their experiences and gain valuable insights into the
+            agency&apos;s strengths and weaknesses.
           </p>
         </div>
       </div>
 
-      <div className="md:grid md:grid-cols-2 flex flex-col gap-20 mb-32 items-center w-full">
+      <div className="md:grid md:grid-cols-2 flex flex-col md:gap-20 gap-10 mb-32 items-center w-full">
         <div className="w-full">
           <h3 className="md:text-3xl text-xl text-center md:text-start font-bold mb-2">
             No more useless discovery calls <br /> with tens of agencies, give
@@ -83,14 +95,22 @@ const Benefits = () => {
             of the problem. If you love the answers, jump on a call and meet.
           </p>
         </div>
-        <div className="w-full">
-          <img src="/benifit4.png" alt="Benefit 4" className="md:w-[80%] w-full h-[300px]" />
+        <div className="w-full flex justify-end">
+          <img
+            src="/benifit4.png"
+            alt="Benefit 4"
+            className="md:w-auto w-full md:h-[300px] h-auto"
+          />
         </div>
       </div>
 
-      <div className="md:grid md:grid-cols-2 flex flex-col-reverse gap-10 mb-32 items-center w-full mt-20">
-        <div className="w-full">
-          <img src="/benifit5.png" alt="Benefit 5" className="md:w-[80%] w-full h-[300px]" />
+      <div className="md:grid md:grid-cols-2 flex flex-col-reverse md:gap-10 gap-10 mb-32 items-center w-full mt-20">
+        <div className="w-full flex justify-start">
+          <img
+            src="/benifit5.png"
+            alt="Benefit 5"
+            className="md:w-auto w-full md:h-[300px] h-auto"
+          />
         </div>
         <div className="w-full">
           <h3 className="md:text-3xl text-lg text-center md:text-start font-bold mb-2">
