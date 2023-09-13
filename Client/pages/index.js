@@ -9,6 +9,7 @@ import Reviews from '../components/Homepage/Reviews';
 import Plans from '../components/Homepage/Plans';
 import Footer from '../components/Footer';
 import SwiperComponent from '../components/Homepage/Swiper';
+import Pricing from '../components/Homepage/Pricing';
 
 export default function Home() {
   const [colorChange, setColorchange] = useState(false);
@@ -55,9 +56,10 @@ export default function Home() {
       {/* <SwiperComponent /> */}
       <Section2 />
       <Benefits />
-      <SwiperComponent images={images} horizontal homepage />
-      <Work />
-      <Reviews />
+      {/* <SwiperComponent images={images} horizontal homepage /> */}
+      {/* <Work /> */}
+      {/* <Reviews /> */}
+      <Pricing />
       <Plans />
       <Footer />
     </div>

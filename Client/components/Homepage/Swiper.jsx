@@ -1,6 +1,7 @@
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 // Import Swiper styles
 import "swiper/css";
@@ -27,6 +28,8 @@ const SwiperComponent = ({ images, reverse, horizontal, homepage }) => {
     mobile = false;
   }
 
+  const [isLoading, setLoading] = useState(true);
+
   return (
     <>
       {horizontal ? (
@@ -41,11 +44,11 @@ const SwiperComponent = ({ images, reverse, horizontal, homepage }) => {
             }}
             speed={slideTransitionDuration}
             loop={true}
-            centeredSlides={false}
+            centeredSlides={true}
             className="mySwiper"
           >
             {images.map((item, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} className="ml-2">
                 <img
                   src={item}
                   alt={`Image ${index}`}
