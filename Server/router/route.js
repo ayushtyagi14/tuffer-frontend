@@ -12,6 +12,9 @@ const upload = multer({ dest: 'uploads/' });
 
 
 
+router.route('/early-access').post(controller.Early); // register user
+
+
 router.route('/register').post(controller.register); // register user
 router.route('/registerMail').post(registerMail); // send the email
 router.route('/authenticate').post(controller.verifyUser, (req, res) => res.end()); // authenticate user

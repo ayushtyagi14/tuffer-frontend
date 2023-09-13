@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-export const UserSchema = new mongoose.Schema({
+export const EarlySchema = new mongoose.Schema({
     FirstName : {
         type: String,
         required : [true, "Please provide unique Firstname"],
@@ -8,11 +8,6 @@ export const UserSchema = new mongoose.Schema({
     LastName : {
         type: String,
         required : [true, "Please provide unique Lastname"],
-    },
-    password: {
-        type: String,
-        // required: [true, "Please provide a password"],
-        // unique : false,
     },
     email: {
         type: String,
@@ -22,9 +17,6 @@ export const UserSchema = new mongoose.Schema({
     type: {
         type: String,
     },
-    mobile : { type : Number},
-    address: { type: String},
-    profile: { type: String}
 });
 
-export default mongoose.model.Users || mongoose.model('User', UserSchema);
+export default mongoose.model.Earls || mongoose.model('Earl', EarlySchema);
