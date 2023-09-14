@@ -1,18 +1,20 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const Plans = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [selectedType, setSelectedType] = useState("brand");
+  const [selectedType, setSelectedType] = useState("");
 
-  const handleNameChange = (e) => {
-    const { name, value } = e.target;
-    if (name === "firstName") {
-      setFirstName(value);
-    } else if (name === "lastName") {
-      setLastName(value);
-    }
+  const [loading, setLoading] = useState(false);
+
+  const handleFirstNameChange = (e) => {
+    setFirstName(e.target.value);
+  };
+
+  const handleLastNameChange = (e) => {
+    setLastName(e.target.value);
   };
 
   const handleEmailChange = (e) => {
@@ -23,16 +25,49 @@ const Plans = () => {
     setSelectedType(e.target.value);
   };
 
-  const handleJoinWaitlist = () => {
-    // Perform action on joining the waitlist, e.g., submit the name, email, and type
-    console.log("Name:", firstName, lastName);
-    console.log("Email:", email);
-    console.log("Selected Type:", selectedType);
-    // Reset the input fields
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setSelectedType("brand");
+  const handleJoinWaitlist = (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    const data = {
+      FirstName: firstName,
+      LastName: lastName,
+      email: email,
+      type: selectedType,
+    };
+
+    fetch("https://tuffer-backend.onrender.com/api/early-access", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        setLoading(false);
+        if (response.status === 201) {
+          toast.success(`Thank you for joining the waitlist!`, {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 1500,
+          });
+          setFirstName("");
+          setLastName("");
+          setEmail("");
+          setSelectedType("");
+        } else {
+          toast.error(`Error: ${response.statusText}`, {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 1500,
+          });
+        }
+      })
+      .catch((error) => {
+        toast.error(`Error: ${error.message}`, {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose: 1500,
+        });
+      });
   };
 
   return (
@@ -57,68 +92,79 @@ const Plans = () => {
           <p className="text-[20px] text-gray-700 mt-4 font-bold">
             Enter your name and work email below to join the waitlist:
           </p>
-          <div className="flex flex-col mt-4">
-            <div className="flex flex-col items-center mb-8">
-              <div className="flex md:flex-row flex-col items-center w-full mb-4">
-                <div className="flex flex-col items-start w-full">
-                  <label htmlFor="firstName" className="font-bold mb-1">
-                    First Name:
-                  </label>
-                  <input
-                    type="text"
-                    name="firstName"
-                    value={firstName}
-                    onChange={handleNameChange}
-                    className="px-4 py-2 border w-full border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ace3fb] focus:border-transparent"
-                  />
+          <form onSubmit={handleJoinWaitlist}>
+            <div className="flex flex-col mt-4">
+              <div className="flex flex-col items-center mb-8">
+                <div className="flex md:flex-row flex-col items-center w-full mb-4">
+                  <div className="flex flex-col items-start w-full">
+                    <label htmlFor="firstName" className="font-bold mb-1">
+                      First Name:
+                    </label>
+                    <input
+                      type="text"
+                      name="firstName"
+                      value={firstName}
+                      onChange={handleFirstNameChange}
+                      className="px-4 py-2 border w-full border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ace3fb] focus:border-transparent"
+                      required
+                    />
+                  </div>
+                  <div className="flex flex-col items-start w-full ml-2 mt-4 md:mt-0">
+                    <label htmlFor="lastName" className="font-bold mb-1">
+                      Last Name:
+                    </label>
+                    <input
+                      type="text"
+                      name="lastName"
+                      value={lastName}
+                      onChange={handleLastNameChange}
+                      className="px-4 py-2 border w-full border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ace3fb] focus:border-transparent"
+                      required
+                    />
+                  </div>
                 </div>
-                <div className="flex flex-col items-start w-full ml-2 mt-4 md:mt-0">
+                <div className="flex flex-col items-start w-full mb-4">
+                  <label htmlFor="selectedType" className="font-bold mb-1">
+                    Type:
+                  </label>
+                  <select
+                    name="selectedType"
+                    value={selectedType}
+                    onChange={handleTypeChange}
+                    className="px-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ace3fb] focus:border-transparent"
+                    required
+                  >
+                    <option value="">Select an option</option>
+                    <option value="brand">Brand</option>
+                    <option value="agency">Agency</option>
+                  </select>
+                </div>
+                <div className="flex flex-col items-start mt-2 w-full">
                   <label htmlFor="lastName" className="font-bold mb-1">
-                    Last Name:
+                    Work Email:
                   </label>
                   <input
-                    type="text"
-                    name="lastName"
-                    value={lastName}
-                    onChange={handleNameChange}
-                    className="px-4 py-2 border w-full border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ace3fb] focus:border-transparent"
+                    type="email"
+                    placeholder="name@company.com"
+                    value={email}
+                    onChange={handleEmailChange}
+                    className="px-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ace3fb] focus:border-transparent"
+                    required
                   />
                 </div>
               </div>
-              <div className="flex flex-col items-start w-full mb-4">
-                <label htmlFor="selectedType" className="font-bold mb-1">
-                  Type:
-                </label>
-                <select
-                  name="selectedType"
-                  value={selectedType}
-                  onChange={handleTypeChange}
-                  className="px-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ace3fb] focus:border-transparent"
-                >
-                  <option value="brand">Brand</option>
-                  <option value="agency">Agency</option>
-                </select>
-              </div>
-              <div className="flex flex-col items-start mt-2 w-full">
-                <label htmlFor="lastName" className="font-bold mb-1">
-                  Work Email:
-                </label>
-                <input
-                  type="email"
-                  placeholder="name@company.com"
-                  value={email}
-                  onChange={handleEmailChange}
-                  className="px-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ace3fb] focus:border-transparent"
-                />
-              </div>
+              <button
+                type="submit"
+                className="px-6 py-2 mt-2 rounded-lg bg-[#cc0049] text-white text-lg font-medium focus:outline-none"
+              >
+                {loading ? (
+                  <span>Loading...</span>
+                ) : (
+                  <span>Request Early Access</span>
+                )}
+              </button>
             </div>
-            <button
-              onClick={handleJoinWaitlist}
-              className="px-6 py-2 mt-2 rounded-lg bg-[#cc0049] text-white text-lg font-medium focus:outline-none"
-            >
-              Request Early Access
-            </button>
-          </div>
+          </form>
         </div>
       </div>
     </div>
