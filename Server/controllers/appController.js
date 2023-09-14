@@ -3,6 +3,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
 import otpGenerator from 'otp-generator';
+import EarlyAccessModel from '../model/EarlyAccess.model.js';
 
 
 const JWT_SECRET = process.env.JWT_SECRET
@@ -77,6 +78,46 @@ export async function register(req, res) {
                         })
                 }
             }).catch(error => {
+                return res.status(500).send({ error })
+            })
+
+
+    } catch (error) {
+        return res.status(500).send(error);
+    }
+
+}
+
+
+export async function Early(req, res) {
+
+    try {
+        const { FirstName, LastName, type, email } = req.body;
+
+        const existEmail = new Promise((resolve, reject) => {
+            EarlyAccessModel.findOne({ email }, function (err, email) {
+                if (err) reject(new Error(err))
+                if (email) reject({ error: "Please use unique Email" });
+                resolve();
+            })
+        });
+
+
+        Promise.all([existEmail])
+            .then(() => {
+                            const user = new EarlyAccessModel({
+                                FirstName,
+                                LastName,
+                                type,
+                                email
+                            });
+
+                            // return save result as a response
+                            user.save()
+                                .then(result => res.status(201).send({ msg: "User Register Successfully" }))
+                                .catch(error => res.status(500).send({ error }))
+            }).catch(error => {
+                console.log(error);
                 return res.status(500).send({ error })
             })
 
