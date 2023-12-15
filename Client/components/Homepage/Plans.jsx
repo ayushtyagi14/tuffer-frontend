@@ -37,7 +37,7 @@ const Plans = () => {
       type: selectedType,
     };
 
-    fetch("https://tuffer-backend.onrender.com/api/early-access", {
+    fetch("https://tuffer.co/api/early-access", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
